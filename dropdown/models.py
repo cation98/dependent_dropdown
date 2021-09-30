@@ -17,11 +17,11 @@ class City(models.Model):
 
 class Person(models.Model):
     name = models.CharField(max_length=100)
-
     birthdate=models.DateField(null=True, blank=True)
     country = models.ForeignKey(Country, on_delete=models.SET_NULL, null=True)
     city = models.ForeignKey(City, on_delete=models.SET_NULL, null=True)
 
 
-    def __set__(self):
+    def __str__(self):
         return self.name
+

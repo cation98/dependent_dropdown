@@ -16,6 +16,7 @@ class PersonListView(ListView):
 class PersonCreateView(CreateView):
     model = Person
     form_class = PersonForm
+    # fields = ('name', 'birthdate', 'country', 'city')
     success_url = reverse_lazy('person_changelist')
 
 class PersonUpdateView(UpdateView):
@@ -32,3 +33,7 @@ def load_cities(request):
     return render(request,
                   'dropdown/city_dropdown_list_options.html',
                   {'cities' : cities})
+
+
+
+

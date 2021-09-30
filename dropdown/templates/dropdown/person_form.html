@@ -5,6 +5,7 @@
   <h2>Person Form</h2>
 
   <form method="post" id="personForm" data-cities-url="{% url 'ajax_load_cities' %}" novalidate>
+{#  <form method="post"  novalidate>#}
     {% csrf_token %}
     <table>
       {{ form.as_table }}

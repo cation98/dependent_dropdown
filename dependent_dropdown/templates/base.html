@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>
-        {% block title%}Simple EX{% endblock %}
+        {% block title %}Simple EX{% endblock %}
     </title>
+    <style type="text/css">
+        .errorlist {
+            margin: 0;
+            padding: 0;
+        }
+
+        .errorlist li {
+            list-style: none;
+            font-size: 90%;
+            color: red;
+        }
+
+        .errorlist ~ input,
+        .errorlist ~ select {
+            border-color: red;
+        }
+    </style>
 </head>
 <body>
 
 
-    <h1>Base HTML 제목</h1>
-    <hr>
+<h1>Base HTML 제목</h1>
+<hr>
 {% block content %}
 {% endblock %}
 </body>
