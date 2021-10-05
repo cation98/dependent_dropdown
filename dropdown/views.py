@@ -24,7 +24,7 @@ class PersonUpdateView(UpdateView):
     form_class = PersonForm
     success_url = reverse_lazy('person_changelist')
 
-
+#dropdown이 변경됐을경우의 callback 함수
 def load_cities(request):
     country_id = request.GET.get('country')
     print(country_id)
